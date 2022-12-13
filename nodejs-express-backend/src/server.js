@@ -26,7 +26,7 @@ app.put('/api/news/:name/upvote', (req, res) => {
     const singlenews = newsInfo.find(a => a.name === name);
     if (singlenews) {
         singlenews.upvotes += 1;
-        res.send(`The ${name} post now has ${singlenews.upvotes} upvotes!!!`);
+        res.send(`The ${name} post now has ${singlenews.upvotes} upvotes!!`);
     } else {
         res.send('That news post doesn\'t exist');
     }
